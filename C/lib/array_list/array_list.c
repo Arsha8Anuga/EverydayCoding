@@ -114,3 +114,10 @@ int capCheckerArrayList(array_list* arr){
 }
 
 void freeArrayList(array_list* arr){
+    
+    if(!arr) return;
+
+    free(arr->data);
+    free(arr);
+
+}
